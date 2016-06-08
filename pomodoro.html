@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="text-center header"><span>Pomodoro Clock</span></div>
+            <div class="text-center">
+                <div class="row breaksession">
+                    <div class="col-xs-6 break_length">Break Length</div>
+                    <div class="col-xs-6 session_length">Session Length</div>
+                </div>
+                <div class="row time-container">
+                    <div class="col-xs-6">
+                        <button class="minus btn btn-danger" id="breakminus" onclick="checker(this)">-</button>
+                        <span class="numbreak" id="numbreak">5</span>
+                        <button class="plus btn btn-success" id="breakplus" onclick="checker(this)">+</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="button" class="minus btn btn-danger" id="sessionminus" onclick="checker(this)" value="-">
+                        <span class="numsession" id="numsession">25</span>
+                        <input type="button" class="plus btn btn-success" id="sessionplus" onclick="checker(this)" value="+" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map text-center">
+            <div class="session" id="sessionword">Session</div>
+            <div class="timer"><span id="minutes"></span> : <span id="seconds"></span></div>
+        </div>
+        <div class="setting row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <div class="row text-center">
+                    <div class="col-xs-2"><input type="button" class="btn btn-warning form-control" value="Reset" id="reset" /></div>
+                    <div class="col-xs-2"><input type="button" class="btn btn-danger form-control" value="Stop" id="stop" /></div>
+                    <div class="col-xs-2"><input type="button" class="btn btn-success form-control" value="Start" id="start" /></div>
+                    <div class="col-xs-2"><input type="button" id="resume" class="btn btn-info form-control" value="Resume" /></div>
+                    <div class="col-xs-2"><input type="button" id="pause" class="btn btn-default form-control" value="Pause"/></div>
+                </div>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </body>
+     <script src="script.js" type="text/javascript"></script>
+</html>
